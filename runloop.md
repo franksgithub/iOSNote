@@ -104,6 +104,9 @@ RunLoop 的核心就是一个 mach_msg()，RunLoop 调用这个函数去接收�
 
 在主线程执行的代码，通常是写在诸如事件回调、Timer回调内的。这些回调会被 RunLoop 创建好的AutoreleasePool 环绕着，所以不会出现内存泄漏，开发者也不必显示创建 Pool 了。
 
+### RunLoop什么时候会被销毁？
+线程销毁时，在创建RunLoop的时候，会注册一个回调函数，在对应的线程销毁时调用。
+
 ### Other
 *  Port-based sources are signaled automatically by the kernel, and custom sources must be signaled manually from another thread.
 

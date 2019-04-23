@@ -33,5 +33,6 @@
 
 * LRU(Least recently used)(最近最少使用算法)
 * MRU(Most recently used)(最近最常使用算法)
+* UIScrollView的属性contentInsetAdjustmentBehavior，不修改默认值的情况下会自动适配iPhoneX系列
 
 
